@@ -1,0 +1,69 @@
+
+  <link rel="stylesheet" type="text/css" href="faq.css">
+  
+
+<div class = faqh1id> <h1>FAQ</h1></div>
+
+<div class="faq">
+    <div class="container">
+<div class="col-12">
+                <ul>
+                  
+                    <li class="question" onclick="toggle_visibility('a2');">
+                       How long has this website been around for ? 
+                        <ul>
+                            <li class="answer" id="a2">
+                                <p>For less than a week </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="question" onclick="toggle_visibility('a3');">
+                        Is the life expectancy accurate ? 
+                        <ul>
+                            <li class="answer" id="a3">
+                                <p>It's an estimate </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="question" onclick="toggle_visibility('a4');">
+                        What's the minimum recommened user age ? 
+                        <ul>
+                            <li class="answer" id="a4">
+                                <p>This website is strictly 18 + </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="question" onclick="toggle_visibility('a5');">
+                       Will you bring out new features ? 
+                        <ul>
+                            <li class="answer" id="a5">
+                                <p>Probably in the future</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="question" onclick="toggle_visibility('a6');">
+                        Are you affiliated with any coorporation ? 
+                        <ul>
+                            <li class="answer" id="a6">
+                                <p>No, we work independently </p>
+
+                            </li>
+                        </ul>
+                    </li>
+                   
+</ul>			
+            </div>
+    </div>
+</div>
+
+<a href = "lifeExpectancyPage.html">previous page</a>
+
+<script>    function toggle_visibility(id) {
+    var e = document.getElementById(id);
+    if(e.style.display == 'block')
+       e.style.display = 'none';
+    else
+       e.style.display = 'block';
+ }</script>
+
+<script></script>

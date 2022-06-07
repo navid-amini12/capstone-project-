@@ -1,0 +1,139 @@
+
+  <link rel="stylesheet" type="text/css" href="allCountryLife.css">
+<!DOCTYPE html>
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        h3 span {
+            font-size: 22px;
+        }
+        h3 input.search-input {
+            width: 300px;
+            margin-left: auto;
+            float: right
+        }
+        .mt32 {
+           padding: 20px;
+        }
+    </style>
+</head>
+<body class="allCountries">
+    <div class="container">
+        <h3>
+            <span>List Of Countries And Their Average Life Expectancy</span>
+            <input type="search" placeholder="Search..." class="form-control search-input" data-table="customers-list"/>
+        </h3>
+        <table class="table table-striped mt32 customers-list">
+            <thead>
+                <tr>
+                    <th>Country Name</th>
+                    <th>Average Life Expectancy (both sexes ) </th>
+                    <th>Average Life Expectancy males</th>
+                    <th>Average Life Expectancy females</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hong Kong</td>
+                    <td>90 years</td>
+                    <td>91 years</td>
+                    <td>92 years</td>
+                 
+                </tr>
+                <tr>
+                    <td>USA</td>
+                    <td>89 years</td>
+                    <td>88 years</td>
+                    <td>87 years</td>
+                 
+                </tr>
+                <tr>
+                    <td>Singapore</td>
+                    <td>86 years</td>
+                    <td>85 years</td>
+                    <td>84 years</td>
+                 
+                </tr>
+                <tr>
+                    <td>Iceland</td>
+                    <td>83 years</td>
+                    <td>82 years</td>
+                    <td>82 years</td>
+                 
+                </tr>
+                <tr>
+                    <td>Sweden</td>
+                    <td>90 years</td>
+                    <td>91 years</td>
+                    <td>90 years</td>
+                 
+                </tr>
+                <tr>
+                    <td>Austria</td>
+                    <td>90 years</td>
+                    <td>91 years</td>
+                    <td>92 years</td>
+                 
+                </tr>
+                <tr>
+                    <td>Taiwan</td>
+                    <td>90 years</td>
+                    <td>91 years</td>
+                    <td>92 years</td>
+                 
+                </tr>
+                <tr>
+                    <td>Poland</td>
+                    <td>90 years</td>
+                    <td>91 years</td>
+                    <td>92 years</td>
+                 
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>
+
+
+
+<script>      
+  (function(document) {
+    'use strict';
+
+    var TableFilter = (function(myArray) {
+        var search_input;
+
+        function _onInputSearch(e) {
+            search_input = e.target;
+            var tables = document.getElementsByClassName(search_input.getAttribute('data-table'));
+            myArray.forEach.call(tables, function(table) {
+                myArray.forEach.call(table.tBodies, function(tbody) {
+                    myArray.forEach.call(tbody.rows, function(row) {
+                        var text_content = row.textContent.toLowerCase();
+                        var search_val = search_input.value.toLowerCase();
+                        row.style.display = text_content.indexOf(search_val) > -1 ? '' : 'none';
+                    });
+                });
+            });
+        }
+
+        return {
+            init: function() {
+                var inputs = document.getElementsByClassName('search-input');
+                myArray.forEach.call(inputs, function(input) {
+                    input.oninput = _onInputSearch;
+                });
+            }
+        };
+    })(Array.prototype);
+
+    document.addEventListener('readystatechange', function() {
+        if (document.readyState === 'complete') {
+            TableFilter.init();
+        }
+    });
+
+})(document);</script>
